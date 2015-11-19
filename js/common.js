@@ -1,8 +1,10 @@
 $(function(){
-	
 	$(window).trigger('resize');
 	
-	
+	$('.linkBack').click(function(e){
+		e.preventDefault();
+		window.history.go(-1);
+	});
 	
 });
 
