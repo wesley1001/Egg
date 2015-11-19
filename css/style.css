@@ -4,8 +4,8 @@ audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
 audio:not([controls]){display:none;height:0}
 [hidden]{display:none}
 html{font-size:20px;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0)}
-html,button,input,select,textarea{font-family:Arial, Microsoft Yahei, "微软雅黑", sans-serif;color:#434343}
-body{margin:0;background-color:#eff2f5}
+html,button,input,select,textarea{font-family:Arial, Simhei, '黑体', Microsoft Yahei, "微软雅黑", sans-serif;color:#434343}
+body{margin:0}
 a{color:#363636;font-weight:lighter;outline:none !important}
 /*a:hover{color:#e20821}*/
 a:link{text-decoration:none}
@@ -111,12 +111,55 @@ html[xmlns] .slides{display:block}
 
 /* Icon */
 
+/* Button */
+.button{display:inline-block;width:auto;padding:0 50px;margin:0 auto;height:80px;color:#fff;text-align:center;font-size:40px;background-color:#fc8b11;border:5px solid #fbbc00;border-radius:5px}
+a.button{line-height:80px}
+
+/* sprite background */
+.spriteCard{position:absolute;left:50%;top:50%;margin:-532.5px 0 0 -377px;height:1065px;width:754px;background:url(../imgs/spriteCard.png) no-repeat center top;box-sizing:border-box}
+.spriteCard h2{text-align:center;font-size:60px;font-weight:bold;color:#fff;line-height:84px;text-shadow:1px 1px #fbbc00, 1px -1px #fbbc00, -1px 1px #fbbc00, -1px -1px #fbbc00, 0 0 10px #fbbc00}
+.spriteCard h2 span{color:#fc8b11;font-size:70px}
 
 /*************************************/
-html{overflow:hidden;overflow-y:auto}
-body{width:800px;margin:0 auto;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;background-size:cover;-webkit-user-select:none;-moz-user-select:none;overflow:hidden;overflow-y:auto}
+body{width:800px;min-height:1111px;margin:0 auto;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none}
 
-#wrap{position:relative}
+/* Login */
+#login{position:relative;height:1065px;padding:23px 0}
+
+/* loginCard */
+.loginCard{padding-top:170px}
+.loginCard p{margin:70px 0}
+.loginCard .button{width:500px;display:block}
+
+/* loginUserCard */
+.loginUserCard{display:none;padding-top:176px}
+.loginUserCard .head{width:236px;height:236px;border-radius:118px;margin:0 auto;border:5px solid #fbbc00;overflow:hidden;background-color:#fafafa;box-shadow:inset 0 -3px 3px rgba(0,0,0,.75)}
+.loginUserCard .head img{width:236px;height:236px}
+.loginUserCard strong{display:block;font-size:50px;text-align:center;color:#fff;line-height:56px;margin:30px 0 50px;text-shadow:1px 1px #fbbc00, 1px -1px #fbbc00, -1px 1px #fbbc00, -1px -1px #fbbc00, 0 0 10px #fbbc00}
+.loginUserCard p{text-align:center;color:#fff;font-size:45px;line-height:78px;font-weight:bold;text-shadow:1px 1px #fbbc00, 1px -1px #fbbc00, -1px 1px #fbbc00, -1px -1px #fbbc00, 0 0 10px #fbbc00}
+.loginUserCard p em{font-size:64px;color:#fc8b11;margin:0 10px}
+.loginUserCard .button{width:500px;margin-top:100px;display:block}
+
+
+/* Header */
+header, footer{position:fixed;left:0;top:0;width:100%;height:100px;background-color:#fbbf0d;z-index:999}
+header h1{height:100px;line-height:100px;margin:0 100px;text-align:center;color:#fff;font-size:36px;font-weight:lighter}
+header .head_l, header .head_r{position:absolute;left:0;top:0;height:100px;width:100px;text-align:center;line-height:100px}
+header .head_r{left:auto;right:0}
+
+
+
+/* Footer */
+footer{background-color:#fff;bottom:0;top:auto;box-shadow:0 -2px 13px rgba(0,0,0,.22)}
+footer a{float:left;width:132px;height:100px;text-align:center}
+footer a:nth-child(1){margin-left:24px}
+footer a:nth-child(4){margin-left:228px}
+footer a:nth-child(3){position:absolute;bottom:20px;left:50%;margin-left:-66px;float:none;display:block;width:132px;height:132px;box-sizing:border-box;border-radius:66px;background-color:#fbbc00;border:8px solid #fff;box-shadow:0 0 12px rgba(0,0,0,.2)}
+
+
+
+/* Main */
+#main{position:relative;height:100%;min-height:1065px;box-sizing:border-box;padding:100px 0 190px}
 
 
 

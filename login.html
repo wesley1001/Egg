@@ -24,10 +24,23 @@
 </head>
 <body>
 
-<section id="wrap">
-
+<section id="login">
+	
+	<section class="spriteCard loginCard">
+		<h2>欢迎回来！<br>让我们继续体验<br><span>创意万花筒</span>的世界吧！</h2>
+		<p><img src="imgs/login.png" alt=""></p>
+		<button class="button" type="button" onClick="$(this).parent().fadeOut();$('.loginUserCard').fadeIn();">确 定</button>
+	</section>
+	
+	<section class="spriteCard loginUserCard">
+		<section class="head"><img src="imgs/header.jpg" alt=""></section>
+		<strong>SAKURA ULALA</strong>
+		<p>您的当前积分为<em>300</em>分</p>
+		<p>您的当前优惠券数量为<em>3</em>张</p>
+		<a class="button" href="index.html" title="">立即出发</a>
+	</section>
+	
 </section>
-
 
 <script src="js/jquery-2.1.3.min.js"></script>
 <script src="js/common.js"></script>
