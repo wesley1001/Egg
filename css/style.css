@@ -121,10 +121,11 @@ a.button{line-height:80px}
 .spriteCard h2 span{color:#fc8b11;font-size:70px}
 
 /*************************************/
+html,body{height:100%}
 body{width:800px;min-height:1111px;margin:0 auto;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none}
 
 /* Login */
-#login{position:relative;height:1065px;padding:23px 0}
+#login{position:relative;height:100%;box-sizing:border-box;padding:23px 0;}
 
 /* loginCard */
 .loginCard{padding-top:170px}
