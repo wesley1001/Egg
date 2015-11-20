@@ -39,7 +39,7 @@ figure{margin:0}
 form{margin:0}
 fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}
 legend{border:0;padding:0;white-space:normal;*margin-left:-7px;}
-button,input[type="text"],input[type="password"],input[type="number"],input[type="submit"],input[type="reset"],select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle;background:none;border:0;padding:0}
+button,input[type="text"],input[type="password"],input[type="number"],input[type="tel"],input[type="date"],input[type="email"],input[type="submit"],input[type="reset"],select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle;background:none;border:0;padding:0;-webkit-appearance:none;border-radius:0}
 button,input,areatext{line-height:normal;outline:none !important}
 button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible;}
 button[disabled],input[disabled]{cursor:default}
@@ -104,10 +104,22 @@ html[xmlns] .slides{display:block}
 .row_5{width:20% !important}
 
 /* Popup */
-.popupbg{display:none;position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,.4);z-index:99}
+.popupbg{display:none;position:fixed;left:0;top:0;width:100%;height:100%;background-color:rgba(255,255,255,.4);z-index:99}
+.popupbox{display:none;position:absolute;z-index:100}
 
 /* Form */
-
+.iptForm li{padding-left:160px;position:relative;min-height:60px;margin-bottom:20px;font-size:32px}
+.iptForm li.full{padding-left:0}
+.iptForm li strong{position:absolute;left:0;top:0;line-height:60px;font-size:32px;font-weight:lighter}
+.iptForm li strong em{position:absolute;left:-20px;color:#ed1c24}
+.iptForm li input{width:100%;height:60px;line-height:56px;border:2px solid #fbbc00;box-sizing:border-box;font-size:32px;padding:0 16px}
+.iptForm li input[type=checkbox]{width:32px;height:32px}
+.iptForm li.rule{padding-left:48px}
+.iptForm li.rule input{position:absolute;left:0;top:0}
+.iptForm li.btn{padding-top:20px}
+.iptForm li.btn .btnConform{width:100%}
+.iptForm li.code .button{position:absolute;right:9px;top:9px}
+.iptForm .iptTip{line-height:60px;color:#999}
 
 /* Icon LJ */
 .lj{display:inline-block;margin:0;padding:0;vertical-align:middle;background:no-repeat left top}
@@ -120,6 +132,7 @@ html[xmlns] .slides{display:block}
 .lj-cart{width:74px;height:59px;background-image:url(../imgs/lj-cart.png)}
 .lj-coupon{width:81px;height:57px;background-image:url(../imgs/lj-coupon.png)}
 .lj-voucher{width:95px;height:55px;background-image:url(../imgs/lj-voucher.png)}
+.lj-check-red{width:27px;height:27px;background-image:url(../imgs/lj-check-red.png)}
 
 /* Button */
 .button{display:inline-block;width:auto;padding:0 50px;margin:0 auto;height:80px;color:#fff;text-align:center;font-size:40px;background-color:#fc8b11;border:5px solid #fbbc00;border-radius:5px}
@@ -134,11 +147,10 @@ a.button{line-height:70px;box-sizing:border-box}
 .spriteCard h2 span{color:#fc8b11;font-size:70px}
 
 /*************************************/
-html,body{height:100%}
-body{width:800px;min-height:1111px;margin:0 auto;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none}
+body{width:800px;margin:0 auto;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none}
 
 /* Login */
-#login{position:relative;height:100%;box-sizing:border-box;padding:23px 0;}
+#login, #register{position:absolute;left:0;top:0;width:100%;min-height:1111px;height:100%;box-sizing:border-box;padding:23px 0}
 
 /* loginCard */
 .loginCard{padding-top:170px}
@@ -146,7 +158,7 @@ body{width:800px;min-height:1111px;margin:0 auto;box-sizing:border-box;-moz-box-
 .loginCard .button{width:500px;display:block}
 
 /* loginUserCard */
-.loginUserCard{display:none;padding-top:176px}
+.loginUserCard{padding-top:176px}
 .loginUserCard .head{width:236px;height:236px;border-radius:118px;margin:0 auto;border:5px solid #fbbc00;overflow:hidden;background-color:#fafafa;box-shadow:inset 0 -3px 3px rgba(0,0,0,.75)}
 .loginUserCard .head img{width:236px;height:236px}
 .loginUserCard strong{display:block;font-size:50px;text-align:center;color:#fff;line-height:56px;margin:30px 0 50px;text-shadow:1px 1px #fbbc00, 1px -1px #fbbc00, -1px 1px #fbbc00, -1px -1px #fbbc00, 0 0 10px #fbbc00}
@@ -154,9 +166,30 @@ body{width:800px;min-height:1111px;margin:0 auto;box-sizing:border-box;-moz-box-
 .loginUserCard p em{font-size:64px;color:#fc8b11;margin:0 10px}
 .loginUserCard .button{width:500px;margin-top:100px;display:block}
 
+/* Register */
+.regLoadCard{padding-top:200px}
+.regLoadCard h2{font-size:64px}
+.regLoadCard h2 span{font-size:80px}
+.regLoadCard .button{margin-top:100px;width:500px;display:block}
+.registerBox{margin:0 40px}
+.registerBox .regUser{text-align:center}
+.registerBox .regUser p{display:inline-block;vertical-align:middle;width:184px;height:184px;margin-right:50px;overflow:hidden;border-radius:92px;box-shadow:0 3px 3px rgba(0,0,0,.75)}
+.registerBox .regUser strong{font-size:40px;margin-right:20px}
+.registerBox .regForm{margin-top:100px}
+.registerBox .regTags{text-align:center}
+.registerBox .regTags label{position:relative;display:inline-block;width:30%;height:48px;background-color:#fbbc00;line-height:48px;font-size:32px;color:#fff;text-align:center;margin:0 6px 16px;cursor:pointer}
+.registerBox .regTags label em{display:none;position:absolute;right:-10px;top:-10px}
+.registerBox .regTags label.act em{display:block}
+.registerBox .regTags input{display:none}
+
+/* popPoints */
+.popPoints{padding-top:180px}
+.popPoints p{margin-top:80px}
+.popPoints .button{margin-top:80px;width:500px;display:block}
+
 
 /* Header */
-header, footer{position:fixed;left:0;top:0;width:100%;height:100px;background-color:#fbbf0d;z-index:999}
+header, footer{position:fixed;left:50%;top:0;width:800px;height:100px;margin-left:-400px;background-color:#fbbf0d;z-index:999}
 header h1{height:100px;line-height:100px;margin:0 100px;text-align:center;color:#fff;font-size:36px;font-weight:lighter}
 header .head_l, header .head_r{position:absolute;left:0;top:0;height:100px;width:100px;text-align:center;line-height:100px}
 header .head_r{left:auto;right:0}
@@ -201,6 +234,8 @@ footer span{display:block;font-size:23px;margin-top:4px}
 .hpQuickLink li.nolink span{padding-top:32px;display:inline-block}
 
 
+/* coupons */
+#coupons{position:absolute;left:0;top:0;width:100%;height:100%;min-height:1290px;background-color:#fbbc00}
 
 
 
