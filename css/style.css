@@ -133,6 +133,8 @@ html[xmlns] .slides{display:block}
 .lj-coupon{width:81px;height:57px;background-image:url(../imgs/lj-coupon.png)}
 .lj-voucher{width:95px;height:55px;background-image:url(../imgs/lj-voucher.png)}
 .lj-check-red{width:27px;height:27px;background-image:url(../imgs/lj-check-red.png)}
+.lj-arrow-prev, .lj-arrow-next{width:25px;height:48px;background-image:url(../imgs/lj-arrow-prev.png)}
+.lj-arrow-next{background-image:url(../imgs/lj-arrow-next.png)}
 
 /* Button */
 .button{display:inline-block;width:auto;padding:0 50px;margin:0 auto;height:80px;color:#fff;text-align:center;font-size:40px;background-color:#fc8b11;border:5px solid #fbbc00;border-radius:5px}
@@ -142,9 +144,13 @@ a.button{line-height:70px;box-sizing:border-box}
 .button.btn-sm{font-size:24px;height:42px;line-height:42px;padding:0 20px}
 
 /* sprite background */
-.spriteCard{position:absolute;left:50%;top:50%;margin:-532.5px 0 0 -377px;height:1065px;width:754px;background:url(../imgs/spriteCard.png) no-repeat center top;box-sizing:border-box}
+.spriteCard, .spriteCardFailure{position:absolute;left:50%;top:50%;margin:-532.5px 0 0 -377px;height:1065px;width:754px;background:url(../imgs/spriteCard.png) no-repeat center top;box-sizing:border-box}
 .spriteCard h2{text-align:center;font-size:60px;font-weight:bold;color:#fff;line-height:84px;text-shadow:1px 1px #fbbc00, 1px -1px #fbbc00, -1px 1px #fbbc00, -1px -1px #fbbc00, 0 0 10px #fbbc00}
 .spriteCard h2 span{color:#fc8b11;font-size:70px}
+
+.spriteCardFailure{background-image:url(../imgs/spriteCardFailure.png)}
+.spriteCardFailure h2{text-align:center;font-size:60px;font-weight:bold;color:#fff;line-height:84px}
+.spriteCardFailure h2 span{color:#fc8b11;font-size:70px}
 
 /*************************************/
 body{width:800px;margin:0 auto;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none}
@@ -233,9 +239,57 @@ footer span{display:block;font-size:23px;margin-top:4px}
 .hpQuickLink li span{color:#fc8b11;font-size:30px;line-height:44px}
 .hpQuickLink li.nolink span{padding-top:32px;display:inline-block}
 
-
 /* coupons */
 #coupons{position:absolute;left:0;top:0;width:100%;height:100%;min-height:1290px;background-color:#fbbc00}
+#coupons h2{padding:200px 0 150px;line-height:100px;text-align:center;color:#fff;font-size:64px}
+#coupons h2 span{color:#fc8b11;font-size:80px}
+#coupons button{display:block;width:500px;margin:250px auto 0}
+
+/* popGetPoupons */
+.popGetPoupons{margin-top:0}
+.popGetPoupons h2{padding-top:180px}
+.popGetPoupons p{margin:80px auto 200px}
+.popGetPoupons button{display:block;width:500px;margin:0 auto}
+
+/* popFailurePoupons */
+.popFailurePoupons, .popFailurePoupons_2{margin-top:0}
+.popFailurePoupons h2, .popFailurePoupons_2 h2{padding-top:160px}
+.popFailurePoupons p, .popFailurePoupons_2 p{margin:60px auto 80px}
+.popFailurePoupons button, .popFailurePoupons_2 button{display:block;width:500px;margin:0 auto}
+.popFailurePoupons_2 p{margin-top:120px}
+
+/* conceptLink */
+.conceptLink{padding-left:44px}
+.conceptLink li{float:left;width:178px}
+.conceptLink li a{display:block;padding:30px 0;text-align:center;color:#ff8604;font-size:28px;font-weight:bold}
+.conceptLink li span{margin-top:10px;display:block}
+
+/* conceptItems */
+.conceptItems h2{position:relative;width:582px;height:52px;line-height:52px;margin:0 auto;text-align:center}
+.conceptItems h2:before{position:absolute;left:0;width:100%;top:25px;height:2px;content:'';background-color:#888}
+.conceptItems h2 span{position:relative;display:inline-block;height:52px;background-color:#fff;padding:0 10px;color:#888}
+.conceptSlide{position:relative;height:382px}
+.conceptSlide .btnPrev, .conceptSlide .btnNext{position:absolute;top:50%;left:20px;margin-top:-24px;cursor:pointer}
+.conceptSlide .btnNext{left:auto;right:20px}
+.conceptScroll{width:682px;height:382px;margin:26px auto 0;box-sizing:border-box;padding:8px;overflow:auto;-webkit-overflow-scrolling:touch}
+.conceptScroll ul{width:10000px}
+.conceptScroll li{float:left;margin-left:46px;width:310px;height:366px;padding:0 16px;box-sizing:border-box;background-color:#ffefea;box-shadow:0 0 8px 2px rgba(0,0,0,.2)}
+.conceptScroll li:first-child{margin-left:0}
+.conceptScroll li strong{font-size:28px;display:block;line-height:52px;font-weight:bold;color:#ff8604;text-align:center}
+.conceptScroll li .img{margin-bottom:6px}
+.conceptScroll li p{font-size:24px;color:#888;line-height:32px}
+.conceptScroll li p span{font-weight:bold;color:#fc8b11}
+.conceptScroll li .button{display:block;font-size:30px;margin-top:6px;height:50px;line-height:50px}
+
+
+
+
+
+
+
+
+
+
 
 
 
