@@ -281,11 +281,16 @@ footer span{display:block;font-size:23px;margin-top:4px}
 .conceptScroll li p span{font-weight:bold;color:#fc8b11}
 .conceptScroll li .button{display:block;font-size:30px;margin-top:6px;height:50px;line-height:50px}
 
-
-
-
-
-
+/* content */
+.content{padding:60px 30px 0}
+.content h2 span{position:relative;display:inline-block;height:60px;line-height:60px;text-align:center;font-size:46px;color:#fff;padding:0 30px;background-color:#fbbc00}
+.content h2 span:after{position:absolute;left:100%;width:0;height:0;top:0;border:30px solid #fbbc00;border-color:#fff #fff #fff #fbbc00;content:''}
+.content strong{display:block;line-height:40px;margin:30px auto 20px;font-size:32px;color:#fc8b11}
+.content strong a{color:#fc8b11}
+.content p{position:relative;margin-left:1em;padding-left:1em;font-size:24px;line-height:36px}
+.content p:before, .content li:before{content:'';position:absolute;left:0;top:10px;width:16px;height:16px;border-radius:8px;background-color:#fbbc00}
+.content li{position:relative;margin-left:1em;padding-left:6em;font-size:24px;line-height:36px}
+.content li span{position:absolute;left:1em;top:0}
 
 
 
