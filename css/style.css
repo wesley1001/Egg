@@ -239,6 +239,11 @@ footer span{display:block;font-size:23px;margin-top:4px}
 .hpQuickLink li span{color:#fc8b11;font-size:30px;line-height:44px}
 .hpQuickLink li.nolink span{padding-top:32px;display:inline-block}
 
+/* hpTit */
+.hpTit{position:relative;height:192px;margin-bottom:40px;background:url(../imgs/spriteTit.png) no-repeat center top}
+.hpTit p{position:absolute;left:67px;top:20px;width:168px;height:168px;line-height:168px;text-align:center}
+.hpTit strong{margin-left:276px;font-size:60px;color:#fc8b11;line-height:162px}
+
 /* coupons */
 #coupons{position:absolute;left:0;top:0;width:100%;height:100%;min-height:1290px;background-color:#fbbc00}
 #coupons h2{padding:200px 0 150px;line-height:100px;text-align:center;color:#fff;font-size:64px}
@@ -292,13 +297,15 @@ footer span{display:block;font-size:23px;margin-top:4px}
 .content li{position:relative;margin-left:1em;padding-left:6em;font-size:24px;line-height:36px}
 .content li span{position:absolute;left:1em;top:0}
 
+/* Help */
+.helpImg{padding:100px 0 80px}
+.helpBtn a{display:block;width:500px;margin:0 auto 30px;line-height:80px}
 
-
-
-
-
-
-
+/* My Coupons */
+.myCouponsItems li{height:234px;background-color:#ffefea;margin-bottom:15px;padding:0 80px}
+.myCouponsItems li p{float:left;position:relative;margin-top:28px;}
+.myCouponsItems li p span{position:absolute;left:14px;bottom:5px;font-size:28px;line-height:36px;color:#fff;}
+.myCouponsItems li .button{float:right;margin-top:92px;height:50px;line-height:50px}
 
 
 
